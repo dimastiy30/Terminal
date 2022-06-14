@@ -1,0 +1,344 @@
+﻿HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+2) Создать папку
+3) Зайти в папку
+4) Создать 3 папки
+5) Зайти в любоую папку
+6) Создать 5 файлов (3 txt, 2 json)
+7) Создать 3 папки
+8. Вывести список содержимого папки
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+12) Выйти из папки на уровень выше
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+15) Найти файл по имени
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+17) вывести несколько первых строк из текстового файла
+18) вывести несколько последних строк из текстового файла
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+20) вывести дату и время
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
+Скрипт
+
+#!/bin/bash
+
+# З) зайти в папку
+
+cd hw_1_test
+
+# 4) Создать 3 папки
+
+mkdir automat automat1 automat2
+
+# 5) Зайти в любоую папку
+
+cd automat
+
+# 6) Создать 5 файлов 3 txt, 2 json
+
+touch 1.txt 2.txt 3.txt 4.json 5.json
+
+# 7) Создать 3 папки
+
+mkdir papka1 papka2 papka3
+
+# 8) Вывести список содержимого папки
+
+ls -la
+
+# 13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+mv 1.txt papka1/1.txt
+
+mv 4.json papka2/4,json
+
+
+
+
+
+
+
+1) Посмотреть где я
+
+$ pwd
+/d/GitBASH_group_QA_30
+
+2) Создать папку
+
+$ mkdir hw_1_test
+
+3) Зайти в папку
+
+$ cd hw_1_test
+
+4) Создать 3 папки
+
+$ mkdir test_1 test_2 test_3
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ ls -la
+total 4
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 ./
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:44 ../
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 test_1/
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 test_2/
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 test_3/
+
+5) Зайти в любоую папку
+
+$ cd test_1
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test/test_1
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+$ touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test/test_1
+$ ls -la
+total 4
+drwxr-xr-x 1 Ляля 197121 0 May 29 17:01 ./
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 ../
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_1.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_2.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_3.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_4.json
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_5.json
+
+7) Создать 3 папки
+
+$ mkdir folder_1 folder_2 folder_3
+
+8) Вывести список содержимого папки
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test/test_1
+$ ls -la
+
+total 4
+drwxr-xr-x 1 Ляля 197121 0 May 29 17:03 ./
+drwxr-xr-x 1 Ляля 197121 0 May 29 16:49 ../
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_1.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_2.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_3.txt
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_4.json
+-rw-r--r-- 1 Ляля 197121 0 May 29 17:01 file_5.json
+drwxr-xr-x 1 Ляля 197121 0 May 29 17:03 folder_1/
+drwxr-xr-x 1 Ляля 197121 0 May 29 17:03 folder_2/
+drwxr-xr-x 1 Ляля 197121 0 May 29 17:03 folder_3/
+
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test/test_1
+$ cat >> file_1
+test1
+test2
+test3
+test4
+test5
+test6
+test7
+
+сохранить Ctrl-c
+
+
+Проверка
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test/test_1
+$ cat file_1
+test1
+test2
+test3
+test4
+test5
+test6
+test7
+
+12) Выйти из папки на уровень выше
+
+$ cd ..
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ mv test_1/file_1.txt test_1/folder_1/file_1.txt
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ mv test_1/file_2.txt test_1/folder_1/file_2.txt
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ cp test_1/file_4.json test_1/folder_2/file_4.json
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ cp test_1/file_5.json test_1/folder_2/file_5.json
+
+
+15) Найти файл по имени
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ find . -name "file_4.json"
+
+./test_1/file_4.json
+./test_1/folder_2/file_4.json
+
+или 
+
+Ляля@▒▒▒▒-▒▒ MINGW64 /d/GitBASH_group_QA_30/hw_1_test
+$ find . -name "*.json"
+
+./test_1/file_4.json
+./test_1/file_5.json
+./test_1/folder_2/file_4.json
+./test_1/folder_2/file_5.json
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+
+
+
+$ grep -i seria file_3.txt
+
+нашло мое искомое слово " seria"
+*  Intel(R) USB 3.0 eXtensible Host seria Controller:  2.5.0.19
+*  NOTE:  This document refers to seria systems containing the
+
+подсчитывает количество строк в котором содержится искомое слово "test"
+
+$ grep -ic test file_3.txt
+2
+
+17) вывести несколько первых строк из текстового файла
+
+
+$ head -6 file_3.txt
+
+test
+*  Production Version Releases
+* loader
+*  Microsoft Windows* 7
+* folder
+*  Intel(R) USB 3.0 eXtensible Host seria Controller:  2.5.0.19
+
+
+18) вывести несколько последних строк из текстового файла
+
+$ tail -6 file_3.txt
+
+*  may t e used, and what information may be disclosed to
+*  others. Please read the Disclaimer section and contact
+*  your Intel field representative if you would like more
+*  information.
+dmitriy golovenko
+*
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+$ less file_3.txt
+
+
+20) вывести дату и время
+
+$ date
+Sun May 29 18:14:30     2022
+
+
+
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+$ curl http://162.55.220.72:5005/terminal-hw-request
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0    903      0 --:--:-- --:--:-- --:--:--   907{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+$ curl http://162.55.220.72:5005/get_method?name=dima\&age=31
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    22  100    22    0     0    281      0 --:--:-- --:--:-- --:--:--   285[
+  "dima",
+  "31"
+]
+
+
+
+2)  2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+Создал исполняемый файл.
+
+Первая строка должна быть обязательно в таком виде.
+#!/bin/bash
+
+# З) зайти в папку
+
+cd hw_1_test
+
+# 4) Создать 3 папки
+
+mkdir automat automat1 automat2
+
+# 5) Зайти в любоую папку
+
+cd automat
+
+# 6) Создать 5 файлов 3 txt, 2 json
+
+touch 1.txt 2.txt 3.txt 4.json 5.json
+
+# 7) Создать 3 папки
+
+mkdir papka1 papka2 papka3
+
+# 8) Вывести список содержимого папки
+
+ls -la
+
+# 13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+mv 1.txt papka1/1.txt
+
+mv 4.json papka2/4,json
+
+
+файл сохранить
+
+в командной строке вбить команду что бы файл был исполняем 
+chmod +x ./само название файла
+
+И потом что бы прочитать и запустить файл 
+./названия файла
+
+ФСЬО )))
+
+
+
+
