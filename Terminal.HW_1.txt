@@ -34,7 +34,7 @@ http://162.55.220.72:5005/terminal-hw-request
 2) Создать папку - mkdir foldername
 3) Зайти в папку - cd foldername
 
-Скрипт
+Скрипт создание
 
 #!/bin/bash
 
